@@ -26,6 +26,7 @@ jobs:
       steps:
         - run: | 
             touch index.html
+            ls 
             echo "this is amazing"
             echo "this is another amazing"
 
