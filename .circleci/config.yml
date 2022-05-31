@@ -35,13 +35,12 @@ jobs:
           - image: cimg/base:stable
       steps:
         - run: |
-            echo name 
+            echo "name "
+            echo $Name
 
               
 
        
-      
-
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -49,4 +48,4 @@ workflows:
     jobs:
       - say-hello
       - save_hello
-      - env_vars
+      - env-vars
