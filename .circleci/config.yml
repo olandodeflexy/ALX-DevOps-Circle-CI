@@ -49,3 +49,4 @@ workflows:
     jobs:
       - say-hello
       - save_hello
+      - env_vars
