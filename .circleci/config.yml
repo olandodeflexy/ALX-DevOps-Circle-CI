@@ -29,6 +29,14 @@ jobs:
             ls 
             echo "this is amazing"
             echo "this is another amazing"
+    
+  env-vars: 
+      docker: 
+          - image: cimg/base:stable
+      steps:
+        - run: |
+            echo pipeline.parameters.name
+              
 
        
       
