@@ -66,6 +66,7 @@ jobs:
         - attach_workspace:
             at: ~/
         - run: cat ~/index.html
+
   when_on_fail:
       docker:
           - image: circleci/node:13.8.0
@@ -86,3 +87,4 @@ workflows:
       - print_output_file:
             requires:
                - save_to_file
+      - when_on_fail
