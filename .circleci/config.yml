@@ -39,7 +39,26 @@ jobs:
             echo $MY_NAME_VAR
             echo $MY_NEW_VAR
 
-              
+  save_to_file:
+      docker:
+          - image: cimg/base:stable
+      steps:
+          - run:
+                name: save to file
+                command: |
+                    echo <p>hello to the world</p> > index.html
+                    echo <p>Amazing </p> >> index.html
+                    echo <h1>hello to the world</h1> >> index.html
+          - persist_to_workspace:
+                root: /
+                paths: 
+                   - /index.html
+          - attach_workspace:
+                at: /index.html
+          - run:
+                name: print html
+                command: |
+                    cat index.html
 
        
 # Invoke jobs via workflows
