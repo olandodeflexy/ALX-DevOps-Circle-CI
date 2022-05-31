@@ -72,9 +72,8 @@ jobs:
           - image: circleci/node:13.8.0
       steps:
           - run: exit 1
-          - run: |
-               echo this failed
-               echo lets fix this
+          - run: 
+               command: echo this failed
                when: on_fail
 
        
