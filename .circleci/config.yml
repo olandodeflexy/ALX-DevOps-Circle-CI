@@ -46,9 +46,9 @@ jobs:
           - run:
                 name: save to file
                 command: |
-                    echo <p>hello to the world</p> > index.html
-                    echo <p>Amazing </p> >> index.html
-                    echo <h1>hello to the world</h1> >> index.html
+                    echo "<p>hello to the world</p>" > index.html
+                    echo "<p>Amazing </p>" >> index.html
+                    echo "<h1>hello to the world</h1>" >> index.html
           - persist_to_workspace:
                 root: /
                 paths: 
