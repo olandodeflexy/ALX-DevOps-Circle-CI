@@ -71,6 +71,6 @@ workflows:
       - save_hello
       - env-vars
       - save_to_file
-      - print_output_file
-          requires
-              - save_to_file
+      - print_output_file:
+            requires:
+               - save_to_file
