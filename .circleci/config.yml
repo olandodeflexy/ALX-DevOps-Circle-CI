@@ -37,6 +37,7 @@ jobs:
         - run: |
             echo "name "
             echo $MY_NAME_VAR
+            echo $MY_NEW_VAR
 
               
 
