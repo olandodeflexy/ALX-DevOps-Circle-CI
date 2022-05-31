@@ -52,7 +52,7 @@ jobs:
           - persist_to_workspace:
                 root: /
                 paths: 
-                   - /index.html
+                   - index.html
           - attach_workspace:
                 at: /index.html
           - run:
